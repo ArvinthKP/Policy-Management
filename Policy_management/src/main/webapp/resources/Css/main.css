@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+.circle {
+  display: inline-block;
+  margin: auto;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  width: 40%;
+  height: 40%;
+}
+
+.p {
+  text-indent: 40px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+
+  /*  
+      We show :before pseudo-element on :hover 
+      and :after pseudo-element on :active 
+  */
+  /* 
+    We hide :before pseudo-element on :active
+  */
+}
+
+body .fontlg {
+  width: 4rem;
+  height: 4rem;
+}
+
+
+body .main {
+  height: 20vh;
+}
+
+body input {
+  border: none !important;
+  border-bottom: 2px solid #666 !important;
+  outline: none !important;
+  text-align: center;
+  width: 80% !important;
+  background: transparent !important;
+}
+
+body .fontfam {
+  letter-spacing: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+ Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body .font {
+  font-family: "Lobster", cursive;
+  letter-spacing: 10px;
+  border: none;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+}
+
+body .font:before, body .font:after {
+  border: 0 solid transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+
+body .font:before {
+  border-top: 2px solid #c47135;
+  left: 0px;
+  top: -5px;
+}
+
+body .font:after {
+  border-bottom: 2px solid #c47135;
+  bottom: -5px;
+  right: 0px;
+}
+
+body .font:hover:before, body .font:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+body .loghov {
+  display: inline-block;
+  position: relative;
+}
+
+body .loghov::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+body .loghov:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+body .card {
+  border: none !important;
+}
+
+body .zindex {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body .button {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  z-index: 2;
+  overflow: hidden;
+}
+
+body .button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary) !important;
+  z-index: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+body .button:hover {
+  color: var(--light) !important;
+}
+
+body .button:hover::after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  z-index: -2;
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */

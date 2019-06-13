@@ -1,0 +1,28 @@
+
+
+
+.form-control{
+    background: #d3d3d3 !important;
+    border-radius: 100px !important;
+    padding: 6px auto !important;
+}
+
+.alignmid{
+    margin-top: 17vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+@media only screen and (max-width: 780px){
+
+.alignmid{
+    margin-top: 0vh;
+}
+
+
+}
