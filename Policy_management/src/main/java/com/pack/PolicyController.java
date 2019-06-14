@@ -101,7 +101,7 @@ public class PolicyController {
 		VendorId=Integer.parseInt(vendorId);
 		}
 		catch (Exception e) {
-			modelMap.addAttribute("String", "please enter number in userid");
+			modelMap.addAttribute("String", "Please Enter Your Id");
 			return "login";
 		}
 		if(VendorId>10000000) 
@@ -120,7 +120,7 @@ public class PolicyController {
 			}
 			else if(result==2) 
 			{
-				modelMap.addAttribute("String", "please enter number in userid");
+				modelMap.addAttribute("String", "Please Check Your Id");
 				return "login";
 			}
 			else 
@@ -151,7 +151,7 @@ public class PolicyController {
 			}
 			else if(result==2) 
 			{
-				modelMap.addAttribute("String", "please enter number in userid");
+				modelMap.addAttribute("String", "Please Check Your Id");
 				return "login";
 			}
 			else 

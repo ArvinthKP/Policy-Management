@@ -14,6 +14,7 @@
   <title>Policy Tracking</title>
   <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css" />
   <link rel="stylesheet" href="<c:url value='/resources/Css/main.css'></c:url>" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
   
   <script>  
 	history.pushState(null, null, location.href);
@@ -21,6 +22,11 @@
         history.go(1);
     }; 
     </script>
+     	<style>
+    .error{
+	color:red !important; 
+}</style>
+
 </head>
 
 <body>
@@ -80,11 +86,11 @@
                     </button>
                   </div>
                   <c:if test="${invalidAttempt == 'true' }">
-                    <div class="form-group invalid">
-                      *invalid attempt please check your credentials
+                    <div class="form-group invalid error">
+                      *Invalid Attempt Please Check Your Credentials
                     </div>
                   </c:if>
-                  <div class="form-group invalid">
+                  <div class="form-group invalid error">
                     ${String}
                   </div>
 							<hr>
@@ -95,7 +101,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>or
     </div>
   </main>
 

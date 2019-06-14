@@ -71,7 +71,7 @@
 
             </li>           
                     <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Logout<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/Policy_management/logout">Logout<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>

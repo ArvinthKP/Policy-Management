@@ -20,6 +20,10 @@
         history.go(1);
     }; 
     </script>
+    <style>
+    .error{
+	color:red !important; 
+}</style>
 </head>
 
 <body>
@@ -105,7 +109,7 @@
                                             </div>
                                             <div class="form-group col-md-6">
 
-                                                <form:input placeholder="Password" path="password"
+                                                <form:password placeholder="Password" path="password"
                                                     cssClass="form-control mx-auto" />
                                                 <form:errors path="password" cssClass="error">
                                                 </form:errors>

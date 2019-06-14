@@ -8,7 +8,7 @@
 <script type="text/javascript">
 function Logout()
 {
-	alert("logout Sucessfull");
+	alert("Logout Sucessfull");
 	window.location.href = "index";
 }
 </script>

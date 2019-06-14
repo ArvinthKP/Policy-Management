@@ -126,7 +126,7 @@
                 </table>
                
                 <form action="/Policy_management/paymentgate" method="post">
-                <button type="submit" class="btn btn-success btn-lg btn-block">
+                <button type="submit" class="btn btn-success btn-block">
                     Pay Now   <span class="glyphicon glyphicon-chevron-right"></span>
                 </button>
                </form>

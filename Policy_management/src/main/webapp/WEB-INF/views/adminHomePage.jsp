@@ -24,6 +24,8 @@ window.onpopstate = function () {
 }; 
 
 </script>
+<link rel="stylesheet" href="<c:url value='/resources/Css/main.css'></c:url>" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css" />
 <style type="text/css">
 .container-fluid
 {
@@ -36,9 +38,43 @@ window.onpopstate = function () {
 </style>
 </head>
 <body>
-	<jsp:include page="navbar.jsp"></jsp:include>
+	<!--<jsp:include page="navbar.jsp"></jsp:include>-->
+	<div id="particles-js" class="zindex"></div>
+	<!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/privacy-policy.png" class="fontlg" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active">
+                <a class="nav-link" href="/Policy_management/addl">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="/Policy_management/addPolicy">Policies</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="/Policy_management/logout">Logout</a>
+                </li>
+            	<li class="nav-item active">
+                 <a class="nav-link">(<% out.println(session.getAttribute("username")); %>) </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar Ends -->
 
 	<div class="container-fliud" >
+	        <div class="card shadow">
+            <div class="card-body ">
+                <div class="table-responsive">
 	<center>
 		<c:if test="${!empty policyList}">
 		<br>
@@ -81,6 +117,25 @@ window.onpopstate = function () {
 		</c:if>
 	</center>
 	</div>
+	</div></div></div>
+    <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- ================= -->
 
+  <script src="<c:url value='/resources/Js/particle.js'></c:url>"></script>
+  <script type="text/Javascript">
+
+          particlesJS.load('particles-js', '<c:url value='/resources/Assets/particles.json'></c:url>', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
 </body>
 </html>

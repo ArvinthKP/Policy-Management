@@ -19,7 +19,11 @@
         history.go(1);
     }; 
     </script>
- 
+ 	
+ 	<style>
+    .error{
+	color:red !important; 
+}</style>
     
 </head>
 
@@ -103,7 +107,7 @@
                                     </div>
                                     <div class="form-group p-1">
 
-                                        <form:input path="password" cssClass="form-control mx-auto"
+                                        <form:password path="password" cssClass="form-control mx-auto"
                                             placeholder="Password" />
                                         <form:errors path="password" cssClass="error">
                                         </form:errors>
@@ -117,7 +121,7 @@
 
                                   
                                        <div class="d-flex justify-content-around align-items-center  flex-md-row flex-column m-2">
-                                         <button type="reset" class="btn btn-sm px-5 m-1 button">Reset</button>
+                                         <a href="/Policy_management/vendor/AddAdmin"><button type="button" class="btn btn-sm px-5 m-1 button">Reset</button></a>
                                            <button type="submit" class="btn btn-sm px-5 m-1 button">Register</button>
                                             </div>
                                         </div>
