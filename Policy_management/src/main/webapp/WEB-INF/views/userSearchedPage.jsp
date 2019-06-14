@@ -107,7 +107,7 @@
 								<td>${search.term_amount}</td>
 								<td>${search.interest}</td>
 							    <td>							
-							        <a href="<c:url value='/paymentInit/${policy.id}'/>">
+							        <a href="<c:url value='/paymentInit/${search.id}'/>">
 								    <button class="btn btn-primary btn-block ">Buy Policy</button>
 							        </a>
 						        </td>
